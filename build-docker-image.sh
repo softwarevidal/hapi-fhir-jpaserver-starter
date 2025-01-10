@@ -1,4 +1,3 @@
 #!/bin/sh
 
-docker build -t hapi-fhir/hapi-fhir-jpaserver-starter .
-
+docker build -t sensei/hapi-fhir-jpaserver-starter:7.7.16-SNAPSHOT-vidal .
