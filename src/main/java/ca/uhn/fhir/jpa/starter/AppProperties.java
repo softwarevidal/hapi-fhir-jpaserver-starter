@@ -876,13 +876,15 @@ public class AppProperties {
 
 	public static class Subscription {
 
-		private Boolean resthook_enabled = false;
-		private Boolean websocket_enabled = false;
-		private Email email = null;
+	 private Boolean resthook_enabled = false;
+	 private Boolean websocket_enabled = false;
+	 private Email email = null;
+	 private Integer polling_interval_ms = null;
+	 private Boolean immediately_queued = false;
 
-		public Boolean getResthook_enabled() {
-			return resthook_enabled;
-		}
+    public Boolean getResthook_enabled() {
+      return resthook_enabled;
+    }
 
 		public void setResthook_enabled(Boolean resthook_enabled) {
 			this.resthook_enabled = resthook_enabled;
@@ -897,15 +899,22 @@ public class AppProperties {
 		}
 
 		public Email getEmail() {
-			return email;
-		}
+      return email;
+    }
 
 		public void setEmail(Email email) {
 			this.email = email;
 		}
 
-		public static class Email {
-			private String from;
+	 public Integer getPolling_interval_ms() { return polling_interval_ms; }
+
+	 public void setPolling_interval_ms(Integer polling_interval_ms) { this.polling_interval_ms = polling_interval_ms; }
+
+	 public Boolean getImmediately_queued() { return immediately_queued; }
+
+	 public void setImmediately_queued(Boolean immediately_queued) { this.immediately_queued = immediately_queued; }
+
+    public static class Email {private String from;
 			private String host;
 			private Integer port = 25;
 			private String username;
